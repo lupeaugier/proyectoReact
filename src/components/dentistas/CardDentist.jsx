@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useGetData } from "../../hooks/UseGetData";
-import { Card, CardContent, Box, Typography, CardMedia } from '@mui/material';
+import { Card, CardContent, Box, Typography, CardMedia, CardActions, Button } from '@mui/material';
 import Doctor from "../../assets/img/doctor.jpeg"
+import { useNavigate } from "react-router-dom";
+import FavoriteButton from "../favorite-button/FavoriteButton";
 
 export const endpoint = "https://jsonplaceholder.typicode.com/users";
 
 export const CardDentist= () => {
 
     const { values } = useGetData(endpoint);
+    const navigate = useNavigate ();
 
     return (
 
@@ -31,8 +33,11 @@ export const CardDentist= () => {
                         <Typography variant="body2">
                             {item?.name}
                         </Typography>
-                        <Link to={`/dentist/${item.id}`}>Ver mas</Link>
                         </CardContent>
+                        <CardActions>
+                            <Button size="small" onClick={() => navigate(`/dentist/${item?.id}`)}>Ver mas</Button>
+                            <FavoriteButton item={item} />
+                        </CardActions>
                         </Card>
                 ))}
         </Box>
