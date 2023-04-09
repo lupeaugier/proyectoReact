@@ -11,13 +11,13 @@ const dynamicImport = (param) => {
 export const routes = [
     {
         id: 1,
-        path: '/home',
+        path: '/',
         Element: dynamicImport("Home"),
     },
     {
         id: 2,
-        path: '/home/dentist/:id',
-        Element: dynamicImport("Details"),
+        path: '/dentist/:id',
+        Element: dynamicImport("Detail"),
     },
     {
         id: 3,

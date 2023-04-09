@@ -13,7 +13,7 @@ const Login = () => {
         e.preventDefault();
         if (values.email) {
             dispatch({ type: "LOGIN", payload: values.email });
-            navigate("/home");
+            navigate("/");
         }
     }
 

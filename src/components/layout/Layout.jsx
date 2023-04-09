@@ -25,7 +25,7 @@ return (
     <Fragment>
         <Box component="header" style={{ display: "flex", justifyContent: "space-between" }}>
             <Stack direction="row" spacing={2}>
-                <Item onClick={() => navigate("/home")} style={{ cursor: "pointer", color: "red" }}>Home</Item>       
+                <Item onClick={() => navigate("/")} style={{ cursor: "pointer", color: "red" }}>Home</Item>       
                 <Item onClick={() => navigate("/favs")} style={{ cursor: "pointer" }}>Favoritos</Item>
                 <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
             </Stack>
