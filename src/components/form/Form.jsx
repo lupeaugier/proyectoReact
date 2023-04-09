@@ -1,20 +1,21 @@
 import React from "react";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { FormContainer,  Container, Button, Title, Input } from '@mui/icons-material/'
+import { Container, Button, Typography, Input } from '@mui/material/'
+
 
 
 const inputs = [
-  { id: 1, label: "Nombre", placeholder: "Nombre", name: "name" },
-  { id: 2, label: "Email", placeholder: "Email", name: "email" }
+    { id: 1, label: "Nombre", placeholder: "Nombre", name: "name" },
+    { id: 2, label: "Email", placeholder: "Email", name: "email" }
 ]
 
 
 const Form = ({ handleFetchValues }) => {
-  const getInitialValues = () => ({
-      name: "",
-      email: ""
-  })
+    const getInitialValues = () => ({
+        name: "",
+        email: ""
+    })
 
 
 
@@ -48,8 +49,8 @@ const onSubmit = (values) => {
 
   return (
     <div>
-    <Title>Contact</Title>
-    <FormContainer from="contact">
+    <Typography align="center" variant="h4">Formulario de contacto</Typography>
+    <Container from="contact">
 
       <form id="form" onSubmit={handleSubmit}>
       {/* <div style={{ width: "100%", textAlign: "center" }}> */}
@@ -83,9 +84,10 @@ const onSubmit = (values) => {
 
       <Container content="row">
           {/* <Button btn="cancel">Cancel</Button> */}
-          <Button form="form" btn="submit">Submit</Button>
+          <Button variant="contained">Submit</Button>
+          {/* <Button form="form" btn="submit">Submit</Button> */}
       </Container>
-      </FormContainer>
+      </Container>
       </div>
 
   )}
