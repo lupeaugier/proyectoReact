@@ -19,7 +19,7 @@ export const CardDentist= () => {
                 values?.map((item) => (
                     <Card sx={{ minWidth: 275 }}>
                         <CardContent 
-                            key={item?.id} 
+                            key={item.id} 
                         >
                         <CardMedia
                         component="img"
