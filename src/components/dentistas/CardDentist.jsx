@@ -4,8 +4,8 @@ import { Card, CardContent, Box, Typography, CardMedia, CardActions, Button } fr
 import Doctor from "../../assets/img/doctor.jpeg"
 import { useNavigate } from "react-router-dom";
 import FavoriteButton from "../favorite-button/FavoriteButton";
+import { endpoint } from "../../pages/Home";
 
-export const endpoint = "https://jsonplaceholder.typicode.com/users";
 
 export const CardDentist= () => {
 

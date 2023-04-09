@@ -10,7 +10,7 @@ const handleDispatch = (state, { type, payload }) => {
             return {
                 ...state,
                 isLogged: true,
-                user: payload
+                //user: payload
             }
         case "LOGOUT":
             localStorage.clear();
@@ -18,10 +18,9 @@ const handleDispatch = (state, { type, payload }) => {
             return {
                 ...state,
                 isLogged: false,
-                user: null
+                //user: null
             }
         case "FAVS":
-            //AQUÍ VA LA LÓGICA PARA VERIFICAR SI EL ELEMENTO YA SE ENCUENTRA
             const doesExist = state.data.some(person => person.id === payload.id);
             doesExist ? removeFromStorage(state, payload) : addInStorage(state, payload);
             return doesExist ? {

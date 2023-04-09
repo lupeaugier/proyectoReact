@@ -10,19 +10,18 @@ const FavoriteButton = ({ item }) => {
 
   return (
     <Box>
-      <Tooltip title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}>
+        <Tooltip title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}>
         <IconButton onClick={() => dispatch({ type: "FAVS", payload: item })}>
-          {
+                {
             isFavorite ? (
-              <FavoriteRoundedIcon />
+            <FavoriteRoundedIcon />
             ) : (
-              <FavoriteBorderRoundedIcon />
+            <FavoriteBorderRoundedIcon />
             )
-          }
+            }
         </IconButton>
-      </Tooltip>
+        </Tooltip>
     </Box>
-  )
-}
+)}
 
 export default FavoriteButton
