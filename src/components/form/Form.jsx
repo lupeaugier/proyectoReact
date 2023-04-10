@@ -6,8 +6,8 @@ import { Container, Button, Typography, Input, Box, Alert } from '@mui/material/
 
 
 const inputs = [
-    { id: 1, type: "text", label: "Nombre", placeholder: "Nombre", name: "name" },
-    { id: 2, type: "text", label: "Email", placeholder: "Email", name: "email" }
+    { id: 1, type: "text", label: "Nombre", placeholder: "Ingrese su Nombre", name: "name" },
+    { id: 2, type: "text", label: "Email", placeholder: "Ingrese su Email", name: "email" }
 ]
 
 
@@ -32,18 +32,15 @@ const getValidationSchema = () => (
     })))
 
 
-const onSubmit = (values) => {
-    setView("message");
+const onSubmit = (values) => {setView("message")}
 
-}
-
-        const { values, setFieldValue, errors, handleSubmit } = useFormik({
-        initialValues: getInitialValues(),
-        validationSchema: getValidationSchema(),
-        validateOnChange: false,
-        validateOnBlur: false,
-        onSubmit
-    })
+const { values, setFieldValue, errors, handleSubmit } = useFormik({
+    initialValues: getInitialValues(),
+    validationSchema: getValidationSchema(),
+    validateOnChange: false,
+    validateOnBlur: false,
+    onSubmit
+})
 
     return (
         <Container align= "center">
@@ -58,12 +55,6 @@ const onSubmit = (values) => {
                     onSubmit={handleSubmit}
                 >
                     
-                    {/* <Container from="contact">
-    
-                    <form id="form" onSubmit={handleSubmit}> */}
-                    {/* <div style={{ width: "100%", textAlign: "center" }}> */}
-                {/* </div> */}
-                        
                     {
                         inputs.map(input => (
                             <Container key={input.id}>
