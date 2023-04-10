@@ -30,7 +30,19 @@ const handleDispatch = (state, { type, payload }) => {
                 ...state,
                 data: addInStorage(state, payload)
             }
-        default:
+        case "DARK":
+            localStorage.setItem("theme", JSON.stringify("dark"))
+            return {
+                ...state,
+                theme: "dark"
+            }
+        case "LIGHT":
+            localStorage.removeItem("theme")
+            return {
+                ...state,
+                theme: null
+            }
+            default:
             return state;
     }
 };
@@ -38,7 +50,7 @@ const handleDispatch = (state, { type, payload }) => {
 const AuthContextProvider = ({children}) => {
     const initialState = {
         isLogged: !!sessionStorage.getItem("token"),
-        //user: null,
+        theme: localStorage.getItem("theme"),
         data: JSON.parse(localStorage.getItem("favoritos")) ?? []
     };
     const [state, dispatch] = useReducer(handleDispatch, initialState);

@@ -7,9 +7,9 @@ import FavoriteButton from "../favorite-button/FavoriteButton";
 import { endpoint } from "../../pages/Home";
 
 
-export const CardDentist = () => {
+export const CardDentist = ({ values }) => {
 
-    const { values } = useGetData(endpoint);
+    //const { values } = useGetData(endpoint);
     const navigate = useNavigate ();
 
     return (

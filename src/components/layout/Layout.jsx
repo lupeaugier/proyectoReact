@@ -7,6 +7,9 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import LogoutIcon from '@mui/icons-material/Logout';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,6 +24,19 @@ const Layout = () => {
     const { state, dispatch } = useContext(AuthContext);
     const navigate = useNavigate();
 
+    const handleTheme = () => {
+		if (state.theme === "dark") {
+			dispatch({ type: "LIGHT" })
+		}
+		else{
+			dispatch({ type: "DARK" })
+		}
+	}
+
+    const handleLogOut = () => {
+		dispatch({ type: "LOGOUT" })
+	}
+
 return (
     <Fragment>
         <Box component="header" style={{ display: "flex", justifyContent: "space-between" }}>
@@ -30,8 +46,23 @@ return (
                 <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
             </Stack>
         <Box>
+            {
+            state.theme === "dark" ? (
+                <Tooltip title="Modo Claro">
+                    <IconButton onClick={handleTheme}>
+                        <LightModeIcon size={30} />
+                    </IconButton>
+                </Tooltip>  
+            ) : (
+                <Tooltip title="Modo Oscuro">
+                    <IconButton onClick={handleTheme}>
+                        <DarkModeIcon size={30} />
+                    </IconButton>
+                </Tooltip>
+            )
+        }
             <Tooltip title="Cerrar sesión">
-            <IconButton onClick={() => dispatch({ type: "LOGOUT" })}>
+            <IconButton onClick={handleLogOut}>
                 <LogoutIcon size={30} />
             </IconButton>
             </Tooltip>
