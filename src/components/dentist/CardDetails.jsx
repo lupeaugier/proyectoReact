@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGetData } from "../../hooks/UseGetData";
-import { Card, CardContent, Box, Typography, CardActions, Button, Avatar } from '@mui/material';
+import { Card, CardContent, Typography, CardActions, Button, Avatar } from '@mui/material';
 import Doctor from "../../assets/img/doctor.jpeg"
 import { useNavigate, useParams } from "react-router-dom";
-import FavoriteButton from "../favorite-button/FavoriteButton";
 import { endpoint } from "../../pages/Home";
 
 
@@ -40,7 +39,6 @@ export const CardDetails= () => {
                         </CardContent>
                         <CardActions>
                             <Button size="small" onClick={() => navigate(-1)}>Volver</Button>
-                            {/* <FavoriteButton values={values} /> */}
                         </CardActions>
                         </Card>
                 );        

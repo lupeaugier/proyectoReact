@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from '../context/AuthContext';
+import { GlobalContext } from '../context/GlobalContext';
 import { Box, Button, Container, TextField, Typography } from '@mui/material';
 
 const Login = () => {
     const [values, setValues] = useState({ email: "", password: "" });
-    const { dispatch } = useContext(AuthContext);
+    const { dispatch } = useContext(GlobalContext);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {

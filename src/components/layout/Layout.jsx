@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
-import { AuthContext } from '../../context/AuthContext';
+import { GlobalContext } from '../../context/GlobalContext';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Box } from '@mui/material';
 
 const Layout = () => {
-    
-    const { state } = useContext(AuthContext);
+
+    const { state } = useContext(GlobalContext);
 
 return (
 

@@ -3,13 +3,10 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Container, Button, Typography, Input, Box, Alert } from '@mui/material/'
 
-
-
 const inputs = [
     { id: 1, type: "text", label: "Nombre", placeholder: "Ingrese su Nombre", name: "name" },
     { id: 2, type: "text", label: "Email", placeholder: "Ingrese su Email", name: "email" }
 ]
-
 
 const Form = () => {
     const getInitialValues = () => ({
@@ -18,7 +15,6 @@ const Form = () => {
     })
 
 const [ view, setView ] = useState("form")
-
 
 const getValidationSchema = () => (
     Yup.lazy(() =>
@@ -32,15 +28,15 @@ const getValidationSchema = () => (
     })))
 
 
-const onSubmit = (values) => {setView("message")}
+    const onSubmit = (values) => {setView("message")}
 
-const { values, setFieldValue, errors, handleSubmit } = useFormik({
-    initialValues: getInitialValues(),
-    validationSchema: getValidationSchema(),
-    validateOnChange: false,
-    validateOnBlur: false,
-    onSubmit
-})
+    const { values, setFieldValue, errors, handleSubmit } = useFormik({
+        initialValues: getInitialValues(),
+        validationSchema: getValidationSchema(),
+        validateOnChange: false,
+        validateOnBlur: false,
+        onSubmit
+    })
 
     return (
         <Container align= "center">
@@ -99,7 +95,7 @@ const { values, setFieldValue, errors, handleSubmit } = useFormik({
         </Container>
 
 
-            )};
+)};
             
 
 export default Form

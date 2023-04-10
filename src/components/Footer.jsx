@@ -1,8 +1,6 @@
 import React  from 'react'
 import Lupe from '../assets/img/Lupe.jpeg'
 import Flor from '../assets/img/Flor.png'
-
-
 import { Container, Paper, Avatar, Stack, Chip }  from '@mui/material';
 
 const Footer = () => {

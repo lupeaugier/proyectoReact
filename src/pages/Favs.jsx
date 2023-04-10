@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { CardDentist } from '../components/dentist/CardDentist';
-import { AuthContext } from '../context/AuthContext';
+import { GlobalContext } from '../context/GlobalContext';
 
 
 const Favs = () => {
-  const { state } = useContext(AuthContext);
+  const { state } = useContext(GlobalContext);
   const values = state.data;
   return (
     <CardDentist values={values}/>

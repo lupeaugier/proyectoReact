@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, CardContent, Box, Typography, CardMedia, CardActions, Button } from '@mui/material';
-import Doctor from "../../assets/img/doctor.jpeg"
 import { useNavigate } from "react-router-dom";
+import Doctor from "../../assets/img/doctor.jpeg"
 import FavoriteButton from "../favorite-button/FavoriteButton";
+import { Card, CardContent, Box, Typography, CardMedia, CardActions, Button } from '@mui/material';
 
 
 export const CardDentist = ({ values }) => {

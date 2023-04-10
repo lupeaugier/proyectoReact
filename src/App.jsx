@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import AuthContextProvider from './context/AuthContext.jsx';
+import GlobalContextProvider from './context/GlobalContext.jsx';
 import {routes, Login, Layout} from "./navigation/routes.js"
 import { ProtectedRoutes } from './components/ProtectedRoutes.jsx';
 import { NewtonsCradle } from '@uiball/loaders'
@@ -17,7 +17,7 @@ const App = () => {
           />
         </Container>}
     >
-      <AuthContextProvider>
+      <GlobalContextProvider>
         <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login />} />
@@ -32,7 +32,7 @@ const App = () => {
           </Route>
         </Routes>
         </BrowserRouter>
-      </AuthContextProvider>
+      </GlobalContextProvider>
     </Suspense>
     
   )

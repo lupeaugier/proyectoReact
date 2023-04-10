@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const useGetData = (endpoint) => {
@@ -13,7 +13,7 @@ export const useGetData = (endpoint) => {
             .catch((error) => {
             console.error(error);
         });
-}, []);
+    }, []);
 
     return {
     values,

@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { Box, IconButton, Tooltip } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
-import { AuthContext } from '../context/AuthContext';
+import { GlobalContext } from '../context/GlobalContext';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-    const { state, dispatch } = useContext(AuthContext);
+    const { state, dispatch } = useContext(GlobalContext);
     const navigate = useNavigate();
 
     const handleTheme = () => {
