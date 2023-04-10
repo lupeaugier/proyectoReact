@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { Container, Button, Typography, Input, Box } from '@mui/material/'
+import { Container, Button, Typography, Input, Box, Alert } from '@mui/material/'
 
 
 
@@ -46,17 +46,17 @@ const onSubmit = (values) => {
     })
 
     return (
-        <Container>
+        <Container align= "center">
         { 
             view === "form" ? (
 
-                <div>
-                <Typography align="center" variant="h4">Formulario de contacto</Typography>
-                <Box
-                        component="form"
-                        sx={{ display: "flex", flexDirection: "column", gap: "20px", width: "40vw", }}
-                        onSubmit={handleSubmit}
-                    >
+                <Container>
+                <Typography variant="h5" mb="40px" color= "#DA6A4E">Formulario de contacto</Typography>
+                <Box 
+                    component="form"
+                    sx={{ display: "flex", flexDirection: "column", gap: "20px", width: "40vw" }}
+                    onSubmit={handleSubmit}
+                >
                     
                     {/* <Container from="contact">
     
@@ -74,36 +74,34 @@ const onSubmit = (values) => {
                                     type = {input.type}
                                     value = {values[input.name]}
                                     onChange = {(e) => setFieldValue(input.name, e.target.value)}
-                            />
+                                />
     
                             { 
                                 errors[input.name] && (
-                                        <p style={{color: "#DA6A4E", fontSize: "16px", padding: 10, margin: 0}}>
-                                            {errors[input.name]}
-                                        </p> 
+                                    <Alert severity="error" style={{ width: "400px", margin: "8px", padding:"4px"}}>{errors[input.name]}</Alert>
                                 )
                             }
                             </Container>
-    
-    
             )
         )}
     
-            {/* </form> */}
     
-            <Container content="row">
-                <Button type='submit' size="small" variant="contained">Enviar</Button>
-              {/* <Button form="form" btn="submit">Submit</Button> */}
-            </Container>
-            </Box>
-            {/* </Container> */}
-            </div>    
+                <Container content="row">
+                    <Button type='submit' size="small" variant="contained">Enviar</Button>
+                </Container>
+
+                </Box>
+            </Container>    
 
 
             ) : (
-                <Typography> 
-                    Gracias {values.name}, te contactaremos cuando antes vía email!
+
+                <Container sx={{ width: "40vW"}}>
+                <Alert severity="success">Tus datos fueron enviados con éxito!</Alert>
+                <Typography mt= "40px" color="#DA6A4E"> 
+                    Gracias <b>{values.name}</b>, te contactaremos cuanto antes vía email!
                 </Typography>
+                </Container>
 
 
             )}

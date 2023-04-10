@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext';
 import Footer from '../Footer';
 import { Outlet, useNavigate } from 'react-router-dom'
-import { Container, Box, IconButton, Tooltip } from '@mui/material';
+import { Box, IconButton, Tooltip } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
@@ -38,41 +38,40 @@ const Layout = () => {
 	}
 
 return (
-    
+
         <Box className={state.theme} style={{width: "100vw", minHeight: "100vh"}} >
-            <Box component="header" style={{ display: "flex", justifyContent: "space-between", padding: "30px", marginBottom: "30px"}}>
-                <Stack direction="row" spacing={2}>
-                    <Item onClick={() => navigate("/")} style={{ cursor: "pointer"}}>Home</Item>       
-                    <Item onClick={() => navigate("/favs")} style={{ cursor: "pointer" }}>Favoritos</Item>
-                    <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
-                </Stack>
-                <Box>
-                    {
-                    state.theme === "dark" ? (
-                        <Tooltip title="Modo Claro">
-                            <IconButton  onClick={handleTheme}>
-                                <LightModeIcon  sx={{color:"#F4F4F4"}} />
-                            </IconButton>
-                        </Tooltip>  
-                    ) : (
-                        <Tooltip title="Modo Oscuro">
-                            <IconButton onClick={handleTheme}>
-                                <DarkModeIcon />
-                            </IconButton>
+                <Box component="header" style={{ display: "flex", justifyContent: "space-between", padding: "30px", marginBottom: "30px"}}>
+                    <Stack direction="row" spacing={2}>
+                        <Item onClick={() => navigate("/")} style={{ cursor: "pointer"}}>Home</Item>       
+                        <Item onClick={() => navigate("/favs")} style={{ cursor: "pointer" }}>Favoritos</Item>
+                        <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
+                    </Stack>
+                    <Box>
+                        {
+                        state.theme === "dark" ? (
+                            <Tooltip title="Modo Claro">
+                                <IconButton  onClick={handleTheme}>
+                                    <LightModeIcon  sx={{color:"#F4F4F4"}} />
+                                </IconButton>
+                            </Tooltip>  
+                        ) : (
+                            <Tooltip title="Modo Oscuro">
+                                <IconButton onClick={handleTheme}>
+                                    <DarkModeIcon />
+                                </IconButton>
+                            </Tooltip>
+                        )
+                        }
+                        <Tooltip title="Cerrar sesión">
+                        <IconButton onClick={handleLogOut}>
+                            <LogoutIcon sx={{color:"#DA6A4E"}} />
+                        </IconButton>
                         </Tooltip>
-                    )
-                    }
-                    <Tooltip title="Cerrar sesión">
-                    <IconButton onClick={handleLogOut}>
-                        <LogoutIcon sx={{color:"#DA6A4E"}} />
-                    </IconButton>
-                    </Tooltip>
+                    </Box>
                 </Box>
-            </Box>
             <Outlet />
             <Footer />
-        </Box>
-  
+        </Box>   
     )
 };
 

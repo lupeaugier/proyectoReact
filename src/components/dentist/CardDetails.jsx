@@ -14,7 +14,7 @@ export const CardDetails= () => {
     const navigate = useNavigate();
 
     return (
-                    <Card sx={{ minWidth: 275 }}>
+                    <Card sx={{ width: "20vw" }}>
                         <CardContent 
                             key={values?.id} 
                         >
