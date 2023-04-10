@@ -13,7 +13,7 @@ const Footer = () => {
         <Stack paddingTop= "100px" direction="row" spacing={2}>
             <Container>
             <Avatar alt="Flor Müller" src={Flor} />
-            <Typography variant='h6' align='center'>Flor Muller</Typography>
+            <Typography variant='h6' align='center'>Flor Müller</Typography>
 
             </Container>
             <Container>

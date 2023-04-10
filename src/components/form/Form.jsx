@@ -24,10 +24,10 @@ const getValidationSchema = () => (
     Yup.lazy(() =>
     Yup.object().shape({
         name: Yup.string()
-        .min(5, 'Tu nombre tiene que tener 5 caracteres como minimo.')
+        .min(5, 'Tu nombre debe tener 5 caracteres como mínimo.')
         .required("Campo Obligatorio"),
         email: Yup.string()
-        .email("Debes ingresar un email valido.")
+        .email("Debes ingresar un email válido.")
         .required('Campo Obligatorio')
     })))
 
@@ -78,7 +78,7 @@ const onSubmit = (values) => {
     
                             { 
                                 errors[input.name] && (
-                                        <p style={{color: "#DA6A4E", fontSize: "12px", padding: 0, margin: 0}}>
+                                        <p style={{color: "#DA6A4E", fontSize: "16px", padding: 10, margin: 0}}>
                                             {errors[input.name]}
                                         </p> 
                                 )
@@ -92,7 +92,6 @@ const onSubmit = (values) => {
             {/* </form> */}
     
             <Container content="row">
-              {/* <Button btn="cancel">Cancel</Button> */}
                 <Button type='submit' size="small" variant="contained">Enviar</Button>
               {/* <Button form="form" btn="submit">Submit</Button> */}
             </Container>
@@ -103,7 +102,7 @@ const onSubmit = (values) => {
 
             ) : (
                 <Typography> 
-                    Gracias {values.name}, te contactaremos cuando antes vía mail
+                    Gracias {values.name}, te contactaremos cuando antes vía email!
                 </Typography>
 
 
