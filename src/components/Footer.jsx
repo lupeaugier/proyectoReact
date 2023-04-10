@@ -3,7 +3,7 @@ import Lupe from '../assets/img/Lupe.jpeg'
 import Flor from '../assets/img/Flor.png'
 
 
-import { Container, Typography, Paper, Avatar, Stack, Chip }  from '@mui/material';
+import { Container, Paper, Avatar, Stack, Chip }  from '@mui/material';
 
 const Footer = () => {
 
