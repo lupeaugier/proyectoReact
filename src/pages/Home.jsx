@@ -6,8 +6,10 @@ export const endpoint = "https://jsonplaceholder.typicode.com/users"
 
 const Home = () => {
     const { values } = useGetData(endpoint);
-    return (   
+    return ( 
+        <main style={{height: "800px"}}>
             <CardDentist values={values}/>   
+        </main>  
     )
 }
 

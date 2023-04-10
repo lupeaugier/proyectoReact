@@ -69,6 +69,7 @@ return (
                         </Tooltip>
                     </Box>
                 </Box>
+
             <Outlet />
             <Footer />
         </Box>   

@@ -9,14 +9,15 @@ const Footer = () => {
 
     return (
         <Paper sx={
-            {marginTop: '10px',
+            {marginTop: '5px',
             position: 'fixed',
             display: 'flex',
             justifyContent: 'center',
             bottom: 0,
-            width: '100%'}} 
+            width: '100%',
+            borderRadius: '0px'}} 
             component="footer" >
-            <Stack paddingTop= "30px" paddingBottom = "30px" direction="row" spacing={2} >
+            <Stack paddingTop= "10px" paddingBottom = "10px" direction="row" spacing={2} >
                 <Container>
                 <Chip
                     avatar={<Avatar alt="Flor Müller" src={Flor} />}

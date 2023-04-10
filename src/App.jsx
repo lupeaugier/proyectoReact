@@ -4,15 +4,19 @@ import AuthContextProvider from './context/AuthContext.jsx';
 import {routes, Login, Layout} from "./navigation/routes.js"
 import { ProtectedRoutes } from './components/ProtectedRoutes.jsx';
 import { NewtonsCradle } from '@uiball/loaders'
+import { Container } from '@mui/material';
 
 const App = () => {
   return (
     <Suspense fallback = {
-        <NewtonsCradle 
-          size={40}
-          speed={1.4} 
-          color="black" 
-        />}>
+        <Container align= "center">
+          <NewtonsCradle 
+            size={40}
+            speed={1.4} 
+            color="black" 
+          />
+        </Container>}
+    >
       <AuthContextProvider>
         <BrowserRouter>
         <Routes>
