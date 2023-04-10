@@ -78,7 +78,7 @@ const onSubmit = (values) => {
     
                             { 
                                 errors[input.name] && (
-                                        <p style={{color: "red", fontSize: "12px", padding: 0, margin: 0}}>
+                                        <p style={{color: "#DA6A4E", fontSize: "12px", padding: 0, margin: 0}}>
                                             {errors[input.name]}
                                         </p> 
                                 )

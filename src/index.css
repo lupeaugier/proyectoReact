@@ -69,11 +69,7 @@ button:focus-visible {
 }
 
 .dark{
-  background-color: #12121296;
+  background-color: #2D2E2E;
   color: white;
 }
-.dark > a {
-  color: white;
-}
-
 

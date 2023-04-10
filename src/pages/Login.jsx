@@ -20,7 +20,7 @@ const Login = () => {
     return (
         <Box
             component="form"
-            sx={{ display: "flex", flexDirection: "column", gap: "20px", width: "40vw", }}
+            sx={{ display: "flex", flexDirection: "column", gap: "20px", width: "30vw", }}
             onSubmit={handleSubmit}
         >
             <TextField

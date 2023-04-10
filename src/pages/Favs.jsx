@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CardDentist } from '../components/dentistas/CardDentist';
+import { CardDentist } from '../components/dentist/CardDentist';
 import { AuthContext } from '../context/AuthContext';
 
 
@@ -8,8 +8,6 @@ const Favs = () => {
   const values = state.data;
   return (
     <CardDentist values={values}/>
-
-
   )
 }
 
