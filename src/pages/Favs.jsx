@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CardDentistTest } from '../components/dentistas/CardDentistTest';
+import { AuthContext } from '../context/AuthContext';
+
 
 const Favs = () => {
+  const { state } = useContext(AuthContext);
+  const values = state.data;
   return (
-    <div>Favs</div>
+    <CardDentistTest values={values}/>
+
+
   )
 }
 

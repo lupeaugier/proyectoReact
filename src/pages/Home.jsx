@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+//import { useGetData } from '../hooks/UseGetData';
+//import Avatar from '../assets/img/doctor.jpeg'
+import { CardDentistTest } from '../components/dentistas/CardDentistTest';
 import { useGetData } from '../hooks/UseGetData';
-import Avatar from '../assets/img/doctor.jpeg'
-import { CardDentist } from '../components/dentistas/CardDentist';
 
 export const endpoint = "https://jsonplaceholder.typicode.com/users"
 
@@ -10,7 +11,7 @@ const Home = () => {
     const { values } = useGetData(endpoint);
     return (
         
-        <CardDentist />
+        <CardDentistTest values={values}/>
         
 
     //     <div>
