@@ -13,33 +13,27 @@ export const CardDetails= () => {
     const navigate = useNavigate();
 
     return (
-                    <Card sx={{ width: "20vw" }}>
-                        <CardContent 
-                            key={values?.id} 
-                        >
-                        <Avatar alt={values?.name} src={Doctor} />
-
-
-                        <Typography variant="body2">
-                            {values?.name}
-                        </Typography>
-
-                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            {values?.email}
-                        </Typography>
-
-                        <Typography variant="body2">
-                            {values?.phone}
-                        </Typography>
-
-                        <Typography variant="body2">
-                            {values?.website}
-                        </Typography>
-                        
-                        </CardContent>
-                        <CardActions>
+            <Card sx={{ width: "20vw" }}>
+                <CardContent 
+                    key={values?.id} 
+                >
+                    <Avatar alt={values?.name} src={Doctor} />
+                    <Typography variant="body2">
+                        {values?.name}
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                        {values?.email}
+                    </Typography>
+                    <Typography variant="body2">
+                        {values?.phone}
+                    </Typography>
+                    <Typography variant="body2">
+                        {values?.website}
+                    </Typography>
+                </CardContent>
+                <CardActions>
                             <Button size="small" onClick={() => navigate(-1)}>Volver</Button>
-                        </CardActions>
-                        </Card>
+                </CardActions>
+            </Card>
                 );        
 }

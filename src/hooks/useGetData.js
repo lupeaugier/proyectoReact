@@ -17,5 +17,5 @@ export const useGetData = (endpoint) => {
 
     return {
     values,
-};
+    };
 };

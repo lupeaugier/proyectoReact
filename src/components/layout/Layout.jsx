@@ -7,10 +7,9 @@ import { Box } from '@mui/material';
 
 const Layout = () => {
 
-    const { state } = useContext(GlobalContext);
+const { state } = useContext(GlobalContext);
 
 return (
-
         <Box className={state.theme} style={{width: "100vw", minHeight: "100vh"}} >
             <Navbar/>
             <Outlet />

@@ -9,14 +9,13 @@ import { Container } from '@mui/material';
 const App = () => {
   return (
     <Suspense fallback = {
-        <Container align= "center">
+        <Container>
           <NewtonsCradle 
             size={40}
             speed={1.4} 
             color="black" 
           />
-        </Container>}
-    >
+        </Container>}>
       <GlobalContextProvider>
         <BrowserRouter>
         <Routes>
@@ -34,7 +33,6 @@ const App = () => {
         </BrowserRouter>
       </GlobalContextProvider>
     </Suspense>
-    
   )
 }
 

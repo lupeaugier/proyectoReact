@@ -33,7 +33,6 @@ const Footer = () => {
                 </Container>
             </Stack>
         </Paper>
-
     )
 }
 

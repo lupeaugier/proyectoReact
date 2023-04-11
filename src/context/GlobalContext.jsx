@@ -40,7 +40,7 @@ const handleDispatch = (state, { type, payload }) => {
                 ...state,
                 theme: null
             }
-            default:
+        default:
             return state;
     }
 };

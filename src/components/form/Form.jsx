@@ -27,7 +27,6 @@ const getValidationSchema = () => (
         .required('Campo Obligatorio')
     })))
 
-
     const onSubmit = (values) => {setView("message")}
 
     const { values, setFieldValue, errors, handleSubmit } = useFormik({

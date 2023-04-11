@@ -36,34 +36,34 @@ const Navbar = () => {
 	}
     return (
         <Box component="header" style={{ display: "flex", justifyContent: "space-between", padding: "30px", marginBottom: "30px"}}>
-                    <Stack direction="row" spacing={2}>
-                        <Item onClick={() => navigate("/")} style={{ cursor: "pointer"}}>Home</Item>       
-                        <Item onClick={() => navigate("/favs")} style={{ cursor: "pointer" }}>Favoritos</Item>
-                        <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
-                    </Stack>
-                    <Box>
-                        {
-                        state.theme === "dark" ? (
-                            <Tooltip title="Modo Claro">
-                                <IconButton  onClick={handleTheme}>
-                                    <LightModeIcon  sx={{color:"#F4F4F4"}} />
-                                </IconButton>
-                            </Tooltip>  
-                        ) : (
-                            <Tooltip title="Modo Oscuro">
-                                <IconButton onClick={handleTheme}>
-                                    <DarkModeIcon />
-                                </IconButton>
-                            </Tooltip>
-                        )
-                        }
-                        <Tooltip title="Cerrar sesión">
-                        <IconButton onClick={handleLogOut}>
-                            <LogoutIcon sx={{color:"#DA6A4E"}} />
+            <Stack direction="row" spacing={2}>
+                <Item onClick={() => navigate("/")} style={{ cursor: "pointer"}}>Home</Item>       
+                <Item onClick={() => navigate("/favs")} style={{ cursor: "pointer" }}>Favoritos</Item>
+                <Item onClick={() => navigate("/contactForm")} style={{ cursor: "pointer" }}>Contact</Item>
+            </Stack>
+            <Box>
+                {
+                state.theme === "dark" ? (
+                    <Tooltip title="Modo Claro">
+                        <IconButton  onClick={handleTheme}>
+                            <LightModeIcon  sx={{color:"#F4F4F4"}} />
                         </IconButton>
-                        </Tooltip>
-                    </Box>
-                </Box>    
+                    </Tooltip>  
+                ) : (
+                    <Tooltip title="Modo Oscuro">
+                        <IconButton onClick={handleTheme}>
+                            <DarkModeIcon />
+                        </IconButton>
+                    </Tooltip>
+                )
+                }
+                <Tooltip title="Cerrar sesión">
+                <IconButton onClick={handleLogOut}>
+                    <LogoutIcon sx={{color:"#DA6A4E"}} />
+                </IconButton>
+                </Tooltip>
+            </Box>
+        </Box>    
     )
 }
 
